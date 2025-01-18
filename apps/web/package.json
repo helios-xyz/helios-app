@@ -19,7 +19,7 @@
     "@repo/security": "workspace:*",
     "@t3-oss/env-nextjs": "^0.11.1",
     "clsx": "^2.1.0",
-    "framer-motion": "10.17.9",
+    "framer-motion": "11.18.1",
     "lucide-react": "0.303.0",
     "next": "^15.1.4",
     "react": "^19.0.0",
