@@ -1,7 +1,7 @@
-import { config } from '@repo/next-config';
-import type { NextConfig } from 'next';
+const { config } = require('@repo/next-config');
 
-const nextConfig: NextConfig = {
+/** @type {import('next').NextConfig} */
+const nextConfig = {
   ...config,
   images: {
     remotePatterns: [
@@ -13,4 +13,4 @@ const nextConfig: NextConfig = {
   },
 };
 
-export default nextConfig;
+module.exports = nextConfig;
