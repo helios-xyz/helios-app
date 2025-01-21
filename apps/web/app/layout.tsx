@@ -1,22 +1,23 @@
 import type { Metadata } from "next"
 import { Inter } from "next/font/google"
-import "./globals.css"
+import { cn } from "@/lib/utils"
+import "../styles/globals.css"
 
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Helios - Your shortcut to daylight",
+  title: "Helios",
   description: "Track the sun's journey through your day with Helios. Beautiful, minimal, and always at your fingertips.",
 }
 
-export default function RootLayout({
-  children,
-}: {
+interface RootLayoutProps {
   children: React.ReactNode
-}) {
+}
+
+export default function RootLayout({ children }: RootLayoutProps) {
   return (
-    <html lang="en" className="dark">
-      <body className={`${inter.className} bg-background text-foreground antialiased`}>
+    <html lang="en">
+      <body className={cn(inter.className, "min-h-screen bg-background")}>
         {children}
       </body>
     </html>

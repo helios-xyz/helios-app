@@ -2,9 +2,7 @@
 
 import { Button } from '@repo/design-system/components/ui/button';
 import { fonts } from '@repo/design-system/lib/fonts';
-import { captureException } from '@sentry/nextjs';
 import type NextError from 'next/error';
-import { useEffect } from 'react';
 
 type GlobalErrorProperties = {
   readonly error: NextError & { digest?: string };
@@ -12,15 +10,16 @@ type GlobalErrorProperties = {
 };
 
 const GlobalError = ({ error, reset }: GlobalErrorProperties) => {
-  useEffect(() => {
-    captureException(error);
-  }, [error]);
-
   return (
     <html lang="en" className={fonts}>
       <body>
-        <h1>Oops, something went wrong</h1>
-        <Button onClick={() => reset()}>Try again</Button>
+        <div className="flex min-h-screen flex-col items-center justify-center">
+          <div className="space-y-4 text-center">
+            <h1 className="text-4xl font-bold">Something went wrong!</h1>
+            <p className="text-gray-600">We apologize for the inconvenience.</p>
+            <Button onClick={reset}>Try again</Button>
+          </div>
+        </div>
       </body>
     </html>
   );
