@@ -1,5 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  transpilePackages: ['@repo/design-system', '@repo/observability'],
   images: {
     remotePatterns: [
       {
