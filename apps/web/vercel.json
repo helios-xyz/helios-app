@@ -1,5 +1,5 @@
 {
-  "buildCommand": "npm install && npm run build",
-  "installCommand": "npm install",
+  "buildCommand": "cd ../.. && pnpm install --no-frozen-lockfile && pnpm turbo build --filter=web...",
+  "installCommand": "cd ../.. && pnpm install --no-frozen-lockfile",
   "framework": "nextjs"
 }
