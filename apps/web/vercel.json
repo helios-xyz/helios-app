@@ -1,7 +1,8 @@
 {
   "version": 2,
   "framework": "nextjs",
-  "buildCommand": "cd ../.. && pnpm install && pnpm turbo build --filter=web...",
+  "buildCommand": "pnpm turbo build --filter=web...",
   "devCommand": "next dev",
-  "installCommand": "cd ../.. && pnpm install"
+  "installCommand": "pnpm install",
+  "rootDirectory": "../../"
 }
