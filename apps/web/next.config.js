@@ -1,8 +1,5 @@
-import { config } from '@repo/next-config';
-
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  ...config,
   images: {
     remotePatterns: [
       {
